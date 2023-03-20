@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: ${customTheme.supabase.radii.inputBorderRadius};
+    padding: ${customTheme.supabase.space.spaceLarge};
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h1 {
+    font-size: ${customTheme.supabase.fontSizes.baseBodySize};
+    font-weight: bold;
+    margin: 0 0 ${customTheme.supabase.space.spaceLarge} 0;
+    text-align: center;
+  }
+  
+  .auth-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .auth-container label {
+    font-size: ${customTheme.supabase.fontSizes.baseLabelSize};
+    margin-bottom: ${customTheme.supabase.space.labelBottomMargin};
+  }
+  
+  .auth-container input {
+    width: 100%;
+    margin-bottom: ${customTheme.supabase.space.spaceMedium};
+    padding: ${customTheme.supabase.space.inputPadding};
+    border: ${customTheme.supabase.borderWidths.inputBorderWidth} solid ${customTheme.supabase.colors.inputBorder};
+    border-radius: ${customTheme.supabase.radii.inputBorderRadius};
+    background-color: ${customTheme.supabase.colors.inputBackground};
+    font-size: ${customTheme.supabase.fontSizes.baseInputSize};
+    font-family: ${customTheme.supabase.fonts.inputFontFamily};
+    color: ${customTheme.supabase.colors.inputText};
+  }
+  
+  .auth-container input:focus {
+    border-color: ${customTheme.supabase.colors.inputBorderFocus};
+    outline: none;
+  }
+  
+  .auth-container input::placeholder {
+    color: ${customTheme.supabase.colors.inputPlaceholder};
+  }
+
+  .auth-container button {
+    padding: ${customTheme.supabase.space.buttonPadding};
+    background-color: ${customTheme.supabase.colors.defaultButtonBackground};
+    color: ${customTheme.supabase.colors.defaultButtonText};
+    border: ${customTheme.supabase.borderWidths.buttonBorderWidth} solid ${customTheme.supabase.colors.defaultButtonBorder};
+    border-radius: ${customTheme.supabase.radii.buttonBorderRadius};
+    font-size: ${customTheme.supabase.fontSizes.baseButtonSize};
+    font-family: ${customTheme.supabase.fonts.buttonFontFamily};
+    cursor: pointer;
+  }
+  
+  .auth-container button:hover {
+    background-color: ${customTheme.supabase.colors.defaultButtonBackgroundHover};
+  }
+
+  

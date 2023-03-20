@@ -5,17 +5,22 @@ import Account from "@/components/Account";
 import { NextPageWithLayout } from "./_app";
 import { ReactElement, ReactNode } from "react";
 
+import customTheme from '../Themes/CustomSupaTheme'
+
+
+
 const Home: NextPageWithLayout = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
-
+  
   return (
-    <div className="container" style={{ padding: "50px 0 100px 0" }}>
+    <div className="container place-self-center max-w-md" style={{ padding: "50px 0 100px 0" }}>
       {!session ? (
         <Auth
           supabaseClient={supabase}
-          appearance={{ theme: ThemeSupa }}
-          theme="dark"
+          appearance={{ theme: customTheme }}
+          theme="evenDarker"
+          providers={['google', 'facebook', 'twitter']}
         />
       ) : (
         <Account session={session} />
